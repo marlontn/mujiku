@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from music import views as music_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', music_views.home, name='home')
 ]
